@@ -1,0 +1,9 @@
+How to use this template:
+- Change the HTML as you wish, the only thing needed is the "codrops-top" division
+- The general styles for the demo page are in default.css. You can change it as you wish but please leave the styles for the "codrops-top" navigation.
+- The styles for the component go into component.css
+- Please note that the default.css includes the border-box reset but no general padding/margin resets
+- If there are more demos, call the files index.html, index2.html, index3.html etc. and link to them from the "codrops-demos" nav
+- Modernizr is used for HTML5Shiv and touch support. If you need anything else just replace it with your custom build: http://modernizr.com/download/
+- The README.md can be used to add licensing information of resources used
+- For writing the tutorial, take a look at some guidelines in article.html
