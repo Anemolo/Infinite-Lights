@@ -90,7 +90,7 @@ a:active {
 /* To Navigation Style */
 .codrops-top {
 	background: #fff;
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.6);
 	text-transform: uppercase;
 	width: 100%;
 	font-size: 0.69em;
@@ -105,7 +105,7 @@ a:active {
 }
 
 .codrops-top a:hover {
-	background: rgba(255,255,255,0.2);
+	background: rgba(255,255,255,0.95);
 	color: #333;
 }
 
