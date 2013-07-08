@@ -13,14 +13,12 @@
 .container > header,
 .codrops-top {
 	font-family: 'Lato', Arial, sans-serif;
+	color: #b1aea6;
 }
 
 .container > header {
 	margin: 0 auto;
 	padding: 2em;
-}
-
-.container > header {
 	text-align: center;
 	background: rgba(0,0,0,0.01);
 }
@@ -35,7 +33,7 @@
 .container > header span {
 	display: block;
 	font-size: 60%;
-	color: #ceccc6;
+	opacity: 0.7;
 	padding: 0 0 0.6em 0.1em;
 }
 
