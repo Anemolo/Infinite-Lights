@@ -1,6 +1,4 @@
-/* General Demo Style */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
 @font-face {
 	font-family: 'codropsicons';
 	src:url('../fonts/codropsicons/codropsicons.eot');
@@ -12,31 +10,11 @@
 	font-style: normal;
 }
 
-*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-body, html { font-size: 100%; padding: 0; margin: 0;}
-
-/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before, .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
-
-body {
-	font-family: 'Lato', Calibri, Arial, sans-serif;
-	color: #89867e;
-	background: #f9f9f9;
+.container > header,
+.codrops-top {
+	font-family: 'Lato', Arial, sans-serif;
 }
 
-a {
-	color: #888;
-	text-decoration: none;
-}
-
-a:hover,
-a:active {
-	color: #333;
-}
-
-/* Header Style */
-.main,
 .container > header {
 	margin: 0 auto;
 	padding: 2em;
@@ -61,32 +39,6 @@ a:active {
 	padding: 0 0 0.6em 0.1em;
 }
 
-/* Main Content */
-.main {
-	max-width: 69em;
-}
-
-.column {
-	float: left;
-	width: 50%;
-	padding: 0 2em;
-	min-height: 300px;
-	position: relative;
-}
-
-.column:nth-child(2) {
-	box-shadow: -1px 0 0 rgba(0,0,0,0.1);
-}
-
-.column p {
-	font-weight: 300;
-	font-size: 2em;
-	padding: 0;
-	margin: 0;
-	text-align: right;
-	line-height: 1.5;
-}
-
 /* To Navigation Style */
 .codrops-top {
 	background: #fff;
@@ -98,6 +50,7 @@ a:active {
 }
 
 .codrops-top a {
+	text-decoration: none;
 	padding: 0 1em;
 	letter-spacing: 0.1em;
 	color: #888;
@@ -138,18 +91,6 @@ a:active {
 	content: "\e004";
 }
 
-.codrops-icon-archive:before {
-	content: "\e002";
-}
-
-.codrops-icon-next:before {
-	content: "\e000";
-}
-
-.codrops-icon-about:before {
-	content: "\e003";
-}
-
 /* Demo Buttons Style */
 .codrops-demos {
 	padding-top: 1em;
@@ -157,6 +98,8 @@ a:active {
 }
 
 .codrops-demos a {
+	text-decoration: none;
+	outline: none;
 	display: inline-block;
 	margin: 0.5em;
 	padding: 0.7em 1.1em;
@@ -170,24 +113,6 @@ a:active {
 .codrops-demos a.current-demo:hover {
 	border-color: #89867e;
 	color: #89867e;
-}
-
-@media screen and (max-width: 46.0625em) {
-	.column {
-		width: 100%;
-		min-width: auto;
-		min-height: auto;
-		padding: 1em; 
-	}
-
-	.column p {
-		text-align: left;
-		font-size: 1.5em;
-	}
-
-	.column:nth-child(2) {
-		box-shadow: 0 -1px 0 rgba(0,0,0,0.1);
-	}
 }
 
 @media screen and (max-width: 25em) {
