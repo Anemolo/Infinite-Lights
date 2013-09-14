@@ -8,6 +8,7 @@
 - Add JS files to the js folder
 - The README.md can be used to add licensing information of resources used
 - For writing the tutorial, take a look at some guidelines in article.html
+- Delete this 'how to' in the final version and leave the following lines:
 
 #### Created by Codrops
 
