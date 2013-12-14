@@ -2,8 +2,8 @@
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>The Title - Demo 1</title>
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -12,7 +12,9 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<div class="container">
@@ -21,7 +23,7 @@
 				<a class="codrops-icon codrops-icon-prev" href="#"><span>Previous Demo</span></a>
 				<span class="right"><a class="codrops-icon codrops-icon-drop" href="#"><span>Back to the Codrops Article</span></a></span>
 			</div>
-			<header>
+			<header class="codrops-header">
 				<h1>The Title <span>A short description</span></h1>	
 				<nav class="codrops-demos">
 					<a class="current-demo" href="index.html">Demo 1</a>
@@ -30,8 +32,14 @@
 				</nav>
 			</header>
 			<div class="component">
-				
+				<!-- the component -->
 			</div>
+			<section class="related">
+				<p>If you enjoyed these effects you might also like:</p>
+				<div><a href=""><h4>Title</h4></a></div>
+				<div><a href=""><h4>Title</h4></a></div>
+				<div><a href=""><h4>Title</h4></a></div>
+			</section>
 		</div><!-- /container -->
 	</body>
 </html>
