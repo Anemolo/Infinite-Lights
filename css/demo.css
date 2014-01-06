@@ -27,6 +27,16 @@ a:hover, a:focus {
 	color: #333;
 }
 
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+ 
+.clearfix:after {
+	clear: both;
+}
+
 .container > header {
 	margin: 0 auto;
 	padding: 2em;
