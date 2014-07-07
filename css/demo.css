@@ -65,7 +65,6 @@ section {
 	font-weight: 700;
 	font-size: 0.69em;
 	line-height: 2.2;
-	background: #fff;
 }
 
 .codrops-top a {
@@ -129,16 +128,18 @@ section {
 }
 
 /* Related demos */
+.related p {
+	font-size: 1.6em;
+}
+
 .related > a {
-	border: 1px solid #333;
+	border: 3px solid;
+	border-color: initial;
 	display: inline-block;
+	vertical-align: top;
 	text-align: center;
 	margin: 20px 10px;
 	padding: 25px;
-}
-
-.related a:hover {
-	border-color: #333;
 }
 
 .related a img {
