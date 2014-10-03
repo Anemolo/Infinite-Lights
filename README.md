@@ -1,10 +1,10 @@
 ## How to use this template:
 
-- Change the HTML as you wish, the only thing needed is the "codrops-top" division
+- Change the HTML as needed, but leave the "codrops-top" division
 - The general styles for the demo page are in demo.css
 - The styles for the component go into component.css
 - If there are more demos, call the files index.html, index2.html, index3.html etc. and link to them from the "codrops-demos" nav
-- Add JS files to the js folder
+- Add JS files to a folder called "js"
 - The README.md can be used to add licensing information of resources used
 - For writing the tutorial, take a look at some guidelines in article.html
 - Delete this 'how to' in the final version and leave the following lines (we'll fill it):
