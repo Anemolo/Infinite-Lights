@@ -152,6 +152,7 @@ a:hover, a:focus {
 }
 
 .media-item__img {
+	max-width: 100%;
 	opacity: 0.3;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
