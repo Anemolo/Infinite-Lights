@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
-
 @font-face {
 	font-weight: normal;
 	font-style: normal;
@@ -16,11 +14,11 @@
 .clearfix:after { clear: both; }
 
 body {
-	background: #fff;
-	color: #333;
-	font-weight: 500;
-	font-size: 1em;
-	font-family: 'Raleway', Arial, sans-serif;
+	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	color: #444;
+	background: #f6f6f6;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -50,7 +48,6 @@ a:hover, a:focus {
 .codrops-header h1 {
 	margin: 0.5em 0 0;
 	letter-spacing: -1px;
-	font-weight: 800;
 	font-size: 3em;
 	line-height: 1;
 }
@@ -59,7 +56,7 @@ a:hover, a:focus {
 	display: block;
 	padding: 0.5em 0 1em;
 	color: #999;
-	font-weight: 700;
+	font-weight: normal;
 	font-size: 0.45em;
 }
 
@@ -75,10 +72,9 @@ a:hover, a:focus {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	margin-left: -1px;
-	width: 2px;
+	width: 1px;
 	height: 100%;
-	background: #ddd;
+	background: rgba(0,0,0,0.1);
 	content: '';
 	-webkit-transform: rotate3d(0,0,1,22.5deg);
 	transform: rotate3d(0,0,1,22.5deg);
