@@ -5,11 +5,10 @@
 - Add JS files to a folder called "js"
 - The README.md can be used to add licensing information of resources used
 - For writing the tutorial, take a look at some guidelines in article.html
-- Delete this 'how to' in the final version and leave the following lines (we'll fill it):
+- Delete this 'how to' in the final version and leave the following (fill in title/description and credits):
 
 
-The Title
-=========
+#The Title
 
 *description*
 
@@ -17,12 +16,23 @@ The Title
 
 [Demo]()
 
+## License
+
 Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
 
 Read more here: [License](http://tympanus.net/codrops/licensing/)
 
+## Credits
+
+
+
+## Misc
+
 Follow us: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/pages/Codrops/159107397912), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/)
 
 [© Codrops 2015](http://www.codrops.com)
+
+
+
 
 
