@@ -14,7 +14,7 @@
 .clearfix:after { clear: both; }
 
 body {
-	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #444;
 	background: #f6f6f6;
 	-webkit-font-smoothing: antialiased;
