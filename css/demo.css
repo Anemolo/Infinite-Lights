@@ -1,20 +1,7 @@
-@font-face {
-	font-weight: normal;
-	font-style: normal;
-	font-family: 'codropsicons';
-	src:url('../fonts/codropsicons/codropsicons.eot');
-	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
-		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
-		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
-}
-
-*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
-.clearfix:before, .clearfix:after {display: table;  content: ''; }
-.clearfix:after { clear: both; }
+*, *::after, *::before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body {
-	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
 	color: #444;
 	background: #f6f6f6;
 	-webkit-font-smoothing: antialiased;
@@ -39,25 +26,32 @@ a:hover, a:focus {
 	pointer-events: none;
 }
 
+/* Icons */
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
 /* Header */
 .codrops-header {
 	padding: 2em 1em 4em;
 	text-align: center;
 }
 
-.codrops-header h1 {
+.codrops-header__title {
 	margin: 0.5em 0 0;
 	letter-spacing: -1px;
 	font-size: 3em;
 	line-height: 1;
 }
 
-.codrops-header h1 span {
-	display: block;
+.codrops-header__tagline {
 	padding: 0.5em 0 1em;
+	margin: 0;
 	color: #999;
-	font-weight: normal;
-	font-size: 0.45em;
 }
 
 /* Top Navigation Style */
@@ -70,11 +64,12 @@ a:hover, a:focus {
 
 .codrops-links::after {
 	position: absolute;
-	top: 0;
+	top: 15%;
 	left: 50%;
 	width: 1px;
-	height: 100%;
-	background: rgba(0,0,0,0.1);
+	height: 70%;
+	background: currentColor;
+	opacity: 0.2;
 	content: '';
 	-webkit-transform: rotate3d(0,0,1,22.5deg);
 	transform: rotate3d(0,0,1,22.5deg);
@@ -83,34 +78,7 @@ a:hover, a:focus {
 .codrops-icon {
 	display: inline-block;
 	margin: 0.5em;
-	width: 1.5em;
-	text-decoration: none;
-}
-
-.codrops-icon span {
-	display: none;
-}
-
-.codrops-icon:before {
-	margin: 0 5px;
-	text-transform: none;
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	font-family: 'codropsicons';
-	line-height: 1;
-
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-}
-
-.codrops-icon--drop:before {
-	content: "\e001";
-	color: #0099cc;
-}
-
-.codrops-icon--prev:before {
-	content: "\e004";
+	padding: 0.5em;
 }
 
 /* Demo links */

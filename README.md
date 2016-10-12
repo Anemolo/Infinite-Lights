@@ -26,8 +26,6 @@ Read more here: [License](http://tympanus.net/codrops/licensing/)
 
 *third party resources*
 
-[Font Awesome](https://fortawesome.github.io/Font-Awesome/) created by [Dave Gandy](https://twitter.com/davegandy). License: [Font Awesome license information](http://fontawesome.io/license).
-
 ## Misc
 
 Follow *Author*: [Twitter](), [Dribbble](), [Google+](), [GitHub]() 
