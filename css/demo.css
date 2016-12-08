@@ -1,20 +1,24 @@
-*, *::after, *::before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 body {
-	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
-	color: #444;
-	background: #f6f6f6;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Roboto', 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
+	color: #333;
+	background: #fff;
 }
 
 a {
-	outline: none;
-	color: #aaa;
 	text-decoration: none;
+	color: #aaa;
+	outline: none;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
 	color: #333;
 }
 
@@ -35,44 +39,85 @@ a:hover, a:focus {
 	fill: currentColor;
 }
 
+/* Page Loader */
+.js .loading::before {
+	content: '';
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #fff;
+	background: rgba(206, 209, 223, 0.9);
+}
+
+.js .loading::after {
+	content: '';
+	position: fixed;
+	z-index: 10000;
+	top: 50%;
+	left: 50%;
+	width: 54px;
+	height: 70px;
+	margin: -35px 0 0 -27px;
+	pointer-events: none;
+	border: 4px solid #fff;
+	transition: opacity 0.3s;
+	animation: loaderAnim 0.8s ease-out infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 0.3;
+		transform: translate3d(0,-100px,0);
+	}
+}
+
 /* Header */
 .codrops-header {
-	padding: 2em 1em 4em;
-	text-align: center;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	padding: 0.8em 0.75em;
 }
 
 .codrops-header__title {
-	margin: 0.5em 0 0;
-	letter-spacing: -1px;
-	font-size: 3em;
-	line-height: 1;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0;
 }
 
 .codrops-header__tagline {
-	padding: 0.5em 0 1em;
 	margin: 0;
-	color: #999;
+	padding: 0.25em 1em 0;
 }
 
 /* Top Navigation Style */
 .codrops-links {
 	position: relative;
-	display: inline-block;
+	display: flex;
+	justify-content: center;
 	text-align: center;
 	white-space: nowrap;
 }
 
 .codrops-links::after {
+	content: '';
 	position: absolute;
 	top: 15%;
 	left: 50%;
 	width: 1px;
 	height: 70%;
+	opacity: 0.7;
 	background: currentColor;
-	opacity: 0.2;
-	content: '';
-	-webkit-transform: rotate3d(0,0,1,22.5deg);
-	transform: rotate3d(0,0,1,22.5deg);
+	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
+	transform: rotate3d(0, 0, 1, 22.5deg);
 }
 
 .codrops-icon {
@@ -81,18 +126,53 @@ a:hover, a:focus {
 	padding: 0.5em;
 }
 
+.github-corner__icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #fff;
+	border: 0;
+	fill: #333;
+}
+
+.github-corner__octo-arm,
+.github-corner__octo-body {
+	fill: currentColor;
+}
+
+.github-corner:hover .github-corner__octo-arm {
+	transform-origin: 130px 106px;
+	animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
+	20%,
+	60% {
+		transform: rotate(-25deg);
+	}
+	40%,
+	80% {
+		transform: rotate(10deg);
+	}
+}
+
+@media (max-width: 500px) {
+	.github-corner:hover .github-corner__octo-arm {
+		animation: none;
+	}
+}
+
 /* Demo links */
-.codrops-demos {
-	margin: 2em 0 0;
+.codrops-header__demos {
+	margin: 0 70px 0 auto;
 }
 
-.codrops-demos a {
-	display: inline-block;
-	margin: 0 0.5em;
-}
-
-.codrops-demos a.current-demo {
-	color: #333;
+.codrops-header__demo {
+	padding: 0 0.5em;
 }
 
 /* Content */
@@ -102,22 +182,20 @@ a:hover, a:focus {
 
 /* Related demos */
 .content--related {
-	text-align: center;
 	font-weight: bold;
+	text-align: center;
 }
 
 .media-item {
 	display: inline-block;
 	padding: 1em;
 	vertical-align: top;
-	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 }
 
 .media-item__img {
 	max-width: 100%;
-	opacity: 0.3;
-	-webkit-transition: opacity 0.3s;
+	opacity: 0.6;
 	transition: opacity 0.3s;
 }
 
@@ -127,19 +205,17 @@ a:hover, a:focus {
 }
 
 .media-item__title {
+	font-size: 1em;
 	margin: 0;
 	padding: 0.5em;
-	font-size: 1em;
 }
 
 @media screen and (max-width: 50em) {
 	.codrops-header {
-		padding: 3em 10% 4em;
+		flex-direction: column;
+		text-align: center;
 	}
-}
-
-@media screen and (max-width: 40em) {
-	.codrops-header h1 {
-		font-size: 2.8em;
+	.codrops-header__demos {
+		margin: 1em 0 0;
 	}
 }
