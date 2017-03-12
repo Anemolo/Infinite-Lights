@@ -6,7 +6,7 @@
 }
 
 body {
-	font-family: 'Roboto Condensed', 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
+	font-family: 'Roboto Condensed', monospace;
 	color: #333;
 	background: #fff;
 }
@@ -126,53 +126,19 @@ a:focus {
 	padding: 0.5em;
 }
 
-.github-corner__icon {
-	position: absolute;
-	top: 0;
-	right: 0;
-	color: #fff;
-	border: 0;
-	fill: #333;
-}
-
-.github-corner__octo-arm,
-.github-corner__octo-body {
-	fill: currentColor;
-}
-
-.github-corner:hover .github-corner__octo-arm {
-	transform-origin: 130px 106px;
-	animation: octocat-wave 560ms ease-in-out;
-}
-
-@keyframes octocat-wave {
-	0%,
-	100% {
-		transform: rotate(0);
-	}
-	20%,
-	60% {
-		transform: rotate(-25deg);
-	}
-	40%,
-	80% {
-		transform: rotate(10deg);
-	}
-}
-
-@media (max-width: 500px) {
-	.github-corner:hover .github-corner__octo-arm {
-		animation: none;
-	}
-}
-
 /* Demo links */
-.codrops-header__demos {
-	margin: 0 70px 0 auto;
+.demos {
+	margin: 0 1em 0 auto;
 }
 
-.codrops-header__demo {
-	padding: 0 0.5em;
+.demo {
+	margin: 0 1em 0.5em 0;
+	padding: 0 0 0.25em;
+	border-bottom: 2px solid transparent;
+}
+
+.demo--current {
+	border-color: currentColor;
 }
 
 /* Content */
@@ -210,12 +176,12 @@ a:focus {
 	padding: 0.5em;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 40em) {
 	.codrops-header {
-		flex-direction: column;
-		text-align: center;
+		justify-content: center;
 	}
-	.codrops-header__demos {
+	.demos {
+		width: 100%;
 		margin: 1em 0 0;
 	}
 }

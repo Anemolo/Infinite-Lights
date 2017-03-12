@@ -16,24 +16,21 @@
 
 [Demo]()
 
-## License
-
-Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
-
-Read more here: [License](http://tympanus.net/codrops/licensing/)
-
 ## Credits
 
 *third party resources*
+
+## License
+This resource can be used freely if integrated or build upon in personal or commercial projects such as websites, web apps and web templates intended for sale. It is not allowed to take the resource "as-is" and sell it, redistribute, re-publish it, or sell "pluginized" versions of it. Free plugins built using this resource should have a visible mention and link to the original work. Always consider the licenses of all included libraries, scripts and images used.
 
 ## Misc
 
 Follow *Author*: [Twitter](), [Dribbble](), [Google+](), [GitHub]() 
 
-Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/pages/Codrops/159107397912), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/), [Instagram](https://www.instagram.com/codropsss/)
+Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/codrops), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/), [Instagram](https://www.instagram.com/codropsss/)
 
 
-[© Codrops 2016](http://www.codrops.com)
+[© Codrops 2017](http://www.codrops.com)
 
 
 
