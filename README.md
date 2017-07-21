@@ -12,6 +12,8 @@
 
 *Description*, *author*
 
+![Image Title](link)
+
 [Article on Codrops]()
 
 [Demo]()

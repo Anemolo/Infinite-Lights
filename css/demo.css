@@ -1,12 +1,11 @@
 *,
 *::after,
 *::before {
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 body {
-	font-family: 'Roboto Mono', monospace;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 	color: #333;
 	background: #fff;
 }
@@ -49,8 +48,6 @@ a:focus {
 	display: flex;
 	width: 100%;
 	height: 100%;
-	text-align: center;
-	color: #fff;
 	background: rgba(206, 209, 223, 0.9);
 }
 
@@ -116,7 +113,6 @@ a:focus {
 	height: 70%;
 	opacity: 0.7;
 	background: currentColor;
-	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
 	transform: rotate3d(0, 0, 1, 22.5deg);
 }
 
