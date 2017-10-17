@@ -108,6 +108,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
+	min-height: 100vh;
 }
 
 .content--fixed {
@@ -119,6 +120,7 @@ main {
 	align-content: space-between;
 	width: 100%;
 	max-width: none;
+	min-height: 0;
 	height: 100vh;
 	padding: 1.5em;
 	pointer-events: none;
