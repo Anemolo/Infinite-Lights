@@ -215,16 +215,6 @@ a.demo--current {
 	padding: 0.25em;
 }
 
-.scene {
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	pointer-events: none;
-}
-
 @media screen and (min-width: 55em) {
 	.icon--keyboard {
 		position: absolute;
@@ -288,6 +278,9 @@ a.demo--current {
 		font-weight: bold;
 		padding-bottom: 0.25em;
 		text-align: center;
+	}
+	.info {
+		margin: 0;
 	}
 	.github {
 		display: block;
