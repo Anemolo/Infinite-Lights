@@ -1,12 +1,9 @@
 ## How to use this template:
 
-- The general styles for the demo page are in css/demo.css and the styles for the component go into css/component.css
-- If there are more demos, call the files index.html, index2.html, index3.html etc. and link to them from the "codrops-demos" nav
-- Add JS files to a folder called "js"
-- The README.md can be used to add licensing information of resources used
+- The general styles for the demo page are in css/base.css and individual styles go into the css/demoN.css
+- The README.md can be used to add credits and licensing information of resources used
 - For writing the tutorial, take a look at some guidelines in article.html
 - Delete this 'how to' in the final version and leave the following (fill in title/description and credits):
-
 
 # The Title
 
@@ -14,9 +11,9 @@
 
 ![Image Title](link)
 
-[Article on Codrops]()
+[Article on Codrops](https://tympanus.net/codrops/?p=)
 
-[Demo]()
+[Demo](http://tympanus.net/Development/.../)
 
 ## Credits
 
