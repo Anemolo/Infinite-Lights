@@ -153,17 +153,9 @@ a:focus {
 	}
 	.frame__tagline {
 		position: relative;
-		margin: 0 0 0 4rem;
+		margin: 0 0 0 1rem;
 		padding: 0 0 0 1rem;
-	}
-	.frame__tagline::before {
-		content: '';
-		position: absolute;
-		right: 100%;
-		top: 50%;
-		height: 1px;
-		width: 3rem;
-		background: var(--color-text);
+		opacity: 0.5;
 	}
 	.frame__github {
 		grid-area: github;
