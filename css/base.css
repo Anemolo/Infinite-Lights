@@ -5,49 +5,50 @@
 }
 
 :root {
-	font-size: 16px;
+	font-size: 15px;
 }
 
 body {
 	margin: 0;
-	--color-text: #fff;
-	--color-bg: #0e0e0f;
-	--color-link: #0f51e4;
-	--color-link-hover: #ebd944;
+	--color-text: #111;
+	--color-bg: #fff;
+	--color-link: #aaa;
+	--color-link-hover: #000;
 	color: var(--color-text);
 	background-color: var(--color-bg);
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
-	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Page Loader */
-.js .loading::before {
+.js .loading::before,
+.js .loading::after {
 	content: '';
 	position: fixed;
-	z-index: 100000;
+	z-index: 1000;
+}
+
+.js .loading::before {
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background: var(--color-bg);
+	pointer-events: none;
 }
 
 .js .loading::after {
-	content: '';
-	position: fixed;
-	z-index: 100000;
 	top: 50%;
 	left: 50%;
 	width: 60px;
 	height: 60px;
 	margin: -30px 0 0 -30px;
-	pointer-events: none;
 	border-radius: 50%;
 	opacity: 0.4;
 	background: var(--color-link);
 	animation: loaderAnim 0.7s linear infinite alternate forwards;
+	pointer-events: none;
 }
 
 @keyframes loaderAnim {
@@ -93,11 +94,6 @@ a:focus {
 	display: inline;
 }
 
-.frame a {
-	text-transform: lowercase;
-}
-
-.frame__github,
 .frame__links a:not(:last-child),
 .frame__demos a:not(:last-child) {
 	margin-right: 1rem;
@@ -129,7 +125,7 @@ a:focus {
 	.frame {
 		position: fixed;
 		text-align: left;
-		z-index: 10000;
+		z-index: 100;
 		top: 0;
 		left: 0;
 		display: grid;
@@ -143,7 +139,7 @@ a:focus {
 		grid-template-rows: auto auto auto;
 		grid-template-areas: 'title links'
 							'... ...'
-							'github demos';
+							'... demos';
 	}
 	.frame__title-wrap {
 		grid-area: title;
@@ -157,11 +153,6 @@ a:focus {
 		margin: 0 0 0 1rem;
 		padding: 0 0 0 1rem;
 		opacity: 0.5;
-	}
-	.frame__github {
-		grid-area: github;
-		justify-self: start;
-		margin: 0;
 	}
 	.frame__demos {
 		margin: 0;
