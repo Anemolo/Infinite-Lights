@@ -35,7 +35,6 @@ body {
 	width: 100%;
 	height: 100%;
 	background: var(--color-bg);
-	pointer-events: none;
 }
 
 .js .loading::after {
@@ -48,7 +47,7 @@ body {
 	opacity: 0.4;
 	background: var(--color-link);
 	animation: loaderAnim 0.7s linear infinite alternate forwards;
-	pointer-events: none;
+
 }
 
 @keyframes loaderAnim {
