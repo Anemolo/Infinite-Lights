@@ -262,13 +262,15 @@ class CarLights {
     let material = new THREE.ShaderMaterial({
       fragmentShader: carLightsFragment,
       vertexShader: carLightsVertex,
-      uniforms: {
-        // uColor: new THREE.Uniform(new THREE.Color(this.color)),
-        uTime: new THREE.Uniform(0),
-        uTravelLength: new THREE.Uniform(options.length),
-        ...this.webgl.fogUniforms,
-        ...distortion_uniforms
-      }
+      uniforms: Object.assign(
+        {
+          // uColor: new THREE.Uniform(new THREE.Color(this.color)),
+          uTime: new THREE.Uniform(0),
+          uTravelLength: new THREE.Uniform(options.length)
+        },
+        this.webgl.fogUniforms,
+        distortion_uniforms
+      )
     });
     let mesh = new THREE.Mesh(instanced, material);
     mesh.frustumCulled = false;
@@ -390,12 +392,14 @@ class LightsSticks {
       vertexShader: sideSticksVertex,
       // This ones actually need double side
       side: THREE.DoubleSide,
-      uniforms: {
-        uTravelLength: new THREE.Uniform(options.length),
-        uTime: new THREE.Uniform(0),
-        ...this.webgl.fogUniforms,
-        ...distortion_uniforms
-      }
+      uniforms: Object.assign(
+        {
+          uTravelLength: new THREE.Uniform(options.length),
+          uTime: new THREE.Uniform(0)
+        },
+        this.webgl.fogUniforms,
+        distortion_uniforms
+      )
     });
 
     const mesh = new THREE.Mesh(instanced, material);
@@ -479,16 +483,18 @@ class Road {
     const material = new THREE.ShaderMaterial({
       fragmentShader: roadFragment,
       vertexShader: roadVertex,
-      uniforms: {
-        uTravelLength: new THREE.Uniform(options.length),
-        uColor: new THREE.Uniform(
-          new THREE.Color(
-            isRoad ? options.colors.roadColor : options.colors.islandColor
+      uniforms: Object.assign(
+        {
+          uTravelLength: new THREE.Uniform(options.length),
+          uColor: new THREE.Uniform(
+            new THREE.Color(
+              isRoad ? options.colors.roadColor : options.colors.islandColor
+            )
           )
-        ),
-        ...this.webgl.fogUniforms,
-        ...distortion_uniforms
-      }
+        },
+        this.webgl.fogUniforms,
+        distortion_uniforms
+      )
     });
     const mesh = new THREE.Mesh(geometry, material);
     mesh.rotation.x = -Math.PI / 2;
