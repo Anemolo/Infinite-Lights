@@ -9,6 +9,7 @@
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 		<!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
 	</head>
@@ -31,9 +32,72 @@
 				</div>
 			</div>
 			<div class="content">
+			<div id='app'></div> 
 				<!-- the content -->
 			</div>
 		</main>
+		<script src="./js/three.min.js"></script>
+		<script src="./js/postprocessing.min.js"></script>
+		<script src="./js/InfiniteLights.js"></script>
+		<script>
+			const container = document.getElementById('app');
+
+			
+		const options = {
+			onSpeedUp: (ev)=>{
+				console.log('FAST')
+			},
+			onSlowDown: (ev)=>{
+				console.log('SLOW');
+			},
+			length: 400,
+			roadWidth: 9,
+			islandWidth: 2,
+			lanesPerRoad: 3,
+
+			totalSideLightSticks: 50,
+			lightPairsPerRoadWay: 50,
+			lightStickWidth: 0.5,
+			lightStickHeight: 1.5,
+
+			/*** These ones have to be arrays of [min,max].  ***/
+			movingAwaySpeed: [60,80],
+			movingCloserSpeed: [-120, -160],
+
+			
+
+			/****  Anything below can be either a number or an array of [min,max] ****/
+
+
+			// Length of the lights. Best to be less than total length
+			carLightsLength: [400 * 0.05, 400 * 0.15],
+			// Radius of the tubes
+			carLightsRadius: [0.05, 0.14],
+			// Width is percentage of a lane. Numbers from 0 to 1
+			carWidthPercentage: [0.3, 0.5],
+			// How drunk the driver is.
+			// carWidthPercentage's max + carShiftX's max -> Cannot go over 1. 
+			// Or cars start going into other lanes 
+			carShiftX: [-0.2, 0.2],
+			// Self Explanatory
+			carFloorSeparation: [0.05, 1],
+
+
+			colors: {
+				roadColor: 0x181818,
+				islandColor: 0x1c1c1c,
+				background: 0x000000,
+				/***  Only these colors can be an arrays ***/
+				leftCars: [0xff102a, 0xE80290, 0xE81C02],
+				rightCars: 0xdadafa,
+				sticks: 0xdadafa
+			}
+		};
+
+			const myApp = new App(container, options);
+			myApp.init()
+			console.log('Testing 1')
+		</script>
 		<!--script src="https://tympanus.net/codrops/adpacks/demoad.js"></script-->
 	</body>
 </html>
