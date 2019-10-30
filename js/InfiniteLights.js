@@ -34,7 +34,7 @@ class App {
     let fog = new THREE.Fog(
       options.colors.background,
       options.length * 0.2,
-      options.length * 500.
+      options.length * 500
     );
     this.scene.fog = fog;
     this.fogUniforms = {
@@ -83,7 +83,7 @@ class App {
       this.camera,
       new POSTPROCESSING.BloomEffect({
         luminanceThreshold: 0.2,
-        luminanceSmoothing: 0.0,
+        luminanceSmoothing: 0,
         resolutionScale: 1
       })
     );
@@ -93,7 +93,7 @@ class App {
       new POSTPROCESSING.SMAAEffect(
         this.assets.smaa.search,
         this.assets.smaa.area,
-        POSTPROCESSING.SMAAPreset.ULTRA
+        POSTPROCESSING.SMAAPreset.MEDIUM
       )
     );
     this.renderPass.renderToScreen = false;
@@ -179,24 +179,28 @@ class App {
     this.leftSticks.update(time);
     this.road.update(time);
 
+    let updateCamera = false;
     let fovChange = lerp(this.camera.fov, this.fovTarget, lerpPercentage);
     if (fovChange !== 0) {
       this.camera.fov += fovChange * delta * 6;
+      updateCamera = true;
     }
 
-    const distortion = this.options.distortion.getJS(0.025, time);
+    if (this.options.distortion.getJS) {
+      const distortion = this.options.distortion.getJS(0.025, time);
 
       this.camera.lookAt(
         new THREE.Vector3(
-          this.camera.position.x +
-            distortion.x ,
-          this.camera.position.y +
-            distortion.y ,
-          this.camera.position.z  + distortion.z 
+          this.camera.position.x + distortion.x,
+          this.camera.position.y + distortion.y,
+          this.camera.position.z + distortion.z
         )
       );
-
+      updateCamera = true;
+    }
+    if (updateCamera) {
       this.camera.updateProjectionMatrix();
+    }
   }
   render(delta) {
     this.composer.render(delta);
