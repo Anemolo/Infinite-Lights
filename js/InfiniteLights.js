@@ -26,7 +26,7 @@ class App {
       10000
     );
     this.camera.position.z = -5;
-    this.camera.position.y = 4;
+    this.camera.position.y = 8;
     this.camera.position.x = 0;
     // this.camera.rotateX(-0.4);
     this.scene = new THREE.Scene();
@@ -209,7 +209,7 @@ class App {
     this.disposed = true;
   }
   setSize(width, height, updateStyles) {
-    this.composer.setSize(width, height, updateStyle);
+    this.composer.setSize(width, height, updateStyles);
   }
   tick() {
     if (this.disposed || !this) return;
@@ -283,7 +283,7 @@ class CarLights {
       new THREE.Vector3(0, 0, -1)
     );
     // Tube with radius = 1
-    let geometry = new THREE.TubeBufferGeometry(curve, 25, 1, 8, false);
+    let geometry = new THREE.TubeBufferGeometry(curve, 40, 1, 8, false);
 
     let instanced = new THREE.InstancedBufferGeometry().copy(geometry);
     instanced.maxInstancedCount = options.lightPairsPerRoadWay * 2;
@@ -372,7 +372,6 @@ class CarLights {
       )
     });
     material.onBeforeCompile = shader => {
-      console.log("done");
       shader.vertexShader = shader.vertexShader.replace(
         "#include <getDistortion_vertex>",
         options.distortion.getDistortion
