@@ -1,8 +1,6 @@
 /**
-    Distortion List:
-     - mountainDistortion
-     - 
 
+    Here on top you can find the uniforms for each distortion. 
 
     // ShaderShaping funcitns
     https://thebookofshaders.com/05/
