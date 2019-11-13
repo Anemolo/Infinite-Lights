@@ -15,27 +15,26 @@
 
 const mountainUniforms = {
   // x, y, z
-  uAmp: new THREE.Uniform(new THREE.Vector3(30, 30, 20)),
-  uFreq: new THREE.Uniform(new THREE.Vector3(3, 6, 10))
+  uFreq: new THREE.Uniform(new THREE.Vector3(3, 6, 10)),
+  uAmp: new THREE.Uniform(new THREE.Vector3(30, 30, 20))
 };
 
 const xyUniforms = {
   // x,y
-  uFreq: new THREE.Uniform(new THREE.Vector2(5, 8.5)),
-  uAmp: new THREE.Uniform(new THREE.Vector2(40, 5))
+  uFreq: new THREE.Uniform(new THREE.Vector2(5, 2)),
+  uAmp: new THREE.Uniform(new THREE.Vector2(25, 15))
 };
 
 const LongRaceUniforms = {
   // x, y
-  uFreq: new THREE.Uniform(new THREE.Vector2(4, 3)),
-  uAmp: new THREE.Uniform(new THREE.Vector2(120, 40))
+  uFreq: new THREE.Uniform(new THREE.Vector2(2, 3)),
+  uAmp: new THREE.Uniform(new THREE.Vector2(35, 10))
 };
 
 const turbulentUniforms = {
   // x,x, y,y
-  uAmp: new THREE.Uniform(new THREE.Vector4(25, 25, 10, 40)),
-
-  uFreq: new THREE.Uniform(new THREE.Vector4(4, 8, 8, 1))
+  uFreq: new THREE.Uniform(new THREE.Vector4(4, 8, 8, 1)),
+  uAmp: new THREE.Uniform(new THREE.Vector4(25, 5, 10, 10))
 };
 
 const deepUniforms = {

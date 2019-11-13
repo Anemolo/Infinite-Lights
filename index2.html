@@ -16,7 +16,7 @@
 		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
 		</script>
 	</head>
-	<body class="demo-1">
+	<body class="demo-2">
 		<main>
 			<div class="frame">
 				<div class="frame__title-wrap">
@@ -29,8 +29,8 @@
 				</div>
 				<div class="frame__info">Hint: Press to speed up</div>
 				<div class="frame__demos">
-					<a href="index.html" class="frame__demo frame__demo--current">interstate 1</a>
-					<a href="index2.html" class="frame__demo">interstate 2</a>
+					<a href="index.html" class="frame__demo">interstate 1</a>
+					<a href="index2.html" class="frame__demo frame__demo--current">interstate 2</a>
 					<a href="index3.html" class="frame__demo">interstate 3</a>
 					<a href="index4.html" class="frame__demo">interstate 4</a>
 					<a href="index5.html" class="frame__demo">interstate 5</a>
@@ -41,9 +41,9 @@
 			<div class="content">
 				<div id="app"></div>
 				<div class="content__title-wrap">
-					<span class="content__pretitle">Indigo Road Systems</span>
-					<h2 class="content__title">Traffic Ohio</h2>
-					<a class="content__link" href="#">Live updates</a>
+					<span class="content__pretitle">Good Road Inc.</span>
+					<h2 class="content__title">Headlights</h2>
+					<a class="content__link" href="#">Learn more</a>
 				</div>
 			</div>
 		</main>
@@ -62,12 +62,12 @@
 				onSlowDown: (ev) => {
 				},
 				// mountainDistortion || LongRaceDistortion || xyDistortion || turbulentDistortion || turbulentDistortionStill || deepDistortionStill || deepDistortion
-				distortion: mountainDistortion, 
+				distortion: LongRaceDistortion, 
 				
 				length: 400,
-				roadWidth: 9,
-				islandWidth: 2,
-				lanesPerRoad: 3,
+				roadWidth: 10,
+				islandWidth: 5,
+				lanesPerRoad: 2,
 
 				fov: 90,
 				fovSpeedUp: 150,
@@ -75,7 +75,7 @@
 				carLightsFade: 0.4,
 
 				totalSideLightSticks: 50,
-				lightPairsPerRoadWay: 50,
+				lightPairsPerRoadWay: 70,
 
 				// Percentage of the lane's width
 				shoulderLinesWidthPercentage: 0.05,
@@ -111,9 +111,9 @@
 					shoulderLines: 0x131318,
 					brokenLines: 0x131318,
 					/***  Only these colors can be an array ***/
-					leftCars: [0xff102a, 0xEB383E, 0xff102a],
-					rightCars: [0xdadafa, 0xBEBAE3, 0x8F97E4],
-					sticks: 0xdadafa,
+					leftCars: [0xFF5F73, 0xE74D60, 0xff102a],
+					rightCars: [0xA4E3E6, 0x80D1D4, 0x53C2C6],
+					sticks: 0xA4E3E6,
 				}
 			};
 

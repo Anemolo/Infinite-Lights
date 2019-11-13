@@ -16,7 +16,7 @@
 		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
 		</script>
 	</head>
-	<body class="demo-1">
+	<body class="demo-4">
 		<main>
 			<div class="frame">
 				<div class="frame__title-wrap">
@@ -29,10 +29,10 @@
 				</div>
 				<div class="frame__info">Hint: Press to speed up</div>
 				<div class="frame__demos">
-					<a href="index.html" class="frame__demo frame__demo--current">interstate 1</a>
+					<a href="index.html" class="frame__demo">interstate 1</a>
 					<a href="index2.html" class="frame__demo">interstate 2</a>
 					<a href="index3.html" class="frame__demo">interstate 3</a>
-					<a href="index4.html" class="frame__demo">interstate 4</a>
+					<a href="index4.html" class="frame__demo frame__demo--current">interstate 4</a>
 					<a href="index5.html" class="frame__demo">interstate 5</a>
 					<a href="index6.html" class="frame__demo">interstate 6</a>
 					<a href="index7.html" class="frame__demo">interstate 7</a>
@@ -41,9 +41,9 @@
 			<div class="content">
 				<div id="app"></div>
 				<div class="content__title-wrap">
-					<span class="content__pretitle">Indigo Road Systems</span>
-					<h2 class="content__title">Traffic Ohio</h2>
-					<a class="content__link" href="#">Live updates</a>
+					<span class="content__pretitle">Cyber Mountain</span>
+					<h2 class="content__title">Aerobase</h2>
+					<a class="content__link" href="#">Play it</a>
 				</div>
 			</div>
 		</main>
@@ -62,10 +62,10 @@
 				onSlowDown: (ev) => {
 				},
 				// mountainDistortion || LongRaceDistortion || xyDistortion || turbulentDistortion || turbulentDistortionStill || deepDistortionStill || deepDistortion
-				distortion: mountainDistortion, 
+				distortion: turbulentDistortion, 
 				
 				length: 400,
-				roadWidth: 9,
+				roadWidth: 10,
 				islandWidth: 2,
 				lanesPerRoad: 3,
 
@@ -74,8 +74,8 @@
 				speedUp: 2,
 				carLightsFade: 0.4,
 
-				totalSideLightSticks: 50,
-				lightPairsPerRoadWay: 50,
+				totalSideLightSticks: 20,
+				lightPairsPerRoadWay: 40,
 
 				// Percentage of the lane's width
 				shoulderLinesWidthPercentage: 0.05,
@@ -92,7 +92,7 @@
 				/****  Anything below can be either a number or an array of [min,max] ****/
 
 				// Length of the lights. Best to be less than total length
-				carLightsLength: [400 * 0.05, 400 * 0.15],
+				carLightsLength: [400 * 0.03, 400 * 0.2],
 				// Radius of the tubes
 				carLightsRadius: [0.05, 0.14],
 				// Width is percentage of a lane. Numbers from 0 to 1
@@ -100,9 +100,9 @@
 				// How drunk the driver is.
 				// carWidthPercentage's max + carShiftX's max -> Cannot go over 1. 
 				// Or cars start going into other lanes 
-				carShiftX: [-0.2, 0.2],
+				carShiftX: [-0.8, 0.8],
 				// Self Explanatory
-				carFloorSeparation: [0.05, 1],
+				carFloorSeparation: [0, 5],
 
 				colors: {
 					roadColor: 0x080808,
@@ -111,9 +111,9 @@
 					shoulderLines: 0x131318,
 					brokenLines: 0x131318,
 					/***  Only these colors can be an array ***/
-					leftCars: [0xff102a, 0xEB383E, 0xff102a],
-					rightCars: [0xdadafa, 0xBEBAE3, 0x8F97E4],
-					sticks: 0xdadafa,
+					leftCars: [0xD856BF, 0x6750A2, 0xC247AC],
+					rightCars: [0x03B3C3, 0x0E5EA5, 0x324555],
+					sticks: 0x03B3C3,
 				}
 			};
 
