@@ -1,4 +1,4 @@
-# High-speed Light Trails Effect in Three.j
+# High-speed Light Trails in Three.js
 A creative coding exploration into how to recreate a high-speed lights effect in real-time using Three.js.
 
 ![Light Trails Effect Article](https://tympanus.net/codrops/wp-content/uploads/2019/11/LightTrails_featured.jpg)
